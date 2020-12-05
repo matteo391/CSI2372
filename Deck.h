@@ -4,9 +4,16 @@
 using namespace std;
 
 
-class Deck : vector <Card*> {
-public: Deck(istream&, const CardFactory*);
-		Card* draw();
-		//todo insertion operator (friend)
+class Deck : public std::vector <Card*> {
+public: 
+	Deck() ;
+	Deck(istream&, const CardFactory*);
+
+	Card* draw();
+	//todo insertion operator (friend)
+
+	friend std::ostream& operator<<(std::ostream&, Deck&);
+
+	
 };
 
