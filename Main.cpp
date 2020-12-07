@@ -8,6 +8,7 @@
 
 int main()
 {
-    //todo: Main Loop
+    Blue hello;
+    hello.getName();
 }
 

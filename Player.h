@@ -11,6 +11,7 @@ private: string name;
 		 vector<Chain<Card*>> chains;
 		 Hand* hand;
 public: Player(string&);
+		Player();
 		Player(istream&, const CardFactory*);
 		string getName();
 		int getNumCoins();

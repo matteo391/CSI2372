@@ -6,11 +6,13 @@
 using namespace std;
 
 class Table {
-	private: Player* players[2];
-			 Deck* deck;
-		 	 DiscardPile* discardPile;
-		 	 TradeArea* tradearea;
+private:	Player* player1;
+			Player* player2;
+		 	DiscardPile* discardPile;
+		 	TradeArea* tradearea;
 	public: Table(istream, const CardFactory*);
+			Table();
+			Deck* deck;
 			bool win(string&);
 			void printHand(bool);
 			//todo insertion operator
