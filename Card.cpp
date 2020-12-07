@@ -117,8 +117,10 @@ void Red::print(ostream& out) {
 //garden
 int garden::getCardsPerCoin(int coins) {
 	switch (coins) {
+	case 1: throw Card::IllegalChain(); return 0;
 	case 2: return 2;
 	case 3: return 3;
+	case 4: throw Card::IllegalChain(); return 0;
 	}
 }
 string garden::getName() {

@@ -3,10 +3,21 @@ using namespace std;
 
 class Card {
 public: virtual int getCardsPerCoin(int coins) = 0;
-		virtual string getName() = 0;
-		virtual void print(ostream& out) = 0;
-		//todo: global stream insertion operator for printing that implements
-		//the "Virtual Friend Function Idiom" with the class hierarchy
+	  virtual string getName() = 0;
+	  virtual void print(ostream& out) = 0;
+	  //todo: global stream insertion operator for printing that implements
+	  //the "Virtual Friend Function Idiom" with the class hierarchy
+
+	  class IllegalType : public exception {
+		  const char* bean() const {
+			  return "Invalid type";
+		  }
+	  };
+	  class IllegalChain : public exception {
+		  const char* bean() const {
+			  return "Invalid chain";
+		  }
+	  };
 };
 
 class Blue : public Card {
