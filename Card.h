@@ -2,6 +2,8 @@
 using namespace std;
 
 class Card {
+private:
+	Card();
 public: virtual int getCardsPerCoin(int coins) = 0;
 	  virtual string getName() = 0;
 	  virtual void print(ostream& out) = 0;
@@ -21,49 +23,57 @@ public: virtual int getCardsPerCoin(int coins) = 0;
 };
 
 class Blue : public Card {
-public: int getCardsPerCoin(int coins);
+public: Blue();
+	    int getCardsPerCoin(int coins);
 		string getName();
 		void print(ostream& out);
 };
 
 class Chili : public Card {
-public: int getCardsPerCoin(int coins);
+public: Chili();
+	    int getCardsPerCoin(int coins);
 		string getName();
 		void print(ostream& out);
 };
 
 class Stink : public Card {
-public: int getCardsPerCoin(int coins);
+public: Stink();
+	    int getCardsPerCoin(int coins);
 		string getName();
 		void print(ostream& out);
 };
 
 class Green : public Card {
-public: int getCardsPerCoin(int coins);
+public: Green();
+	    int getCardsPerCoin(int coins);
 		string getName();
 		void print(ostream& out);
 };
 
 class soy : public Card {
-public: int getCardsPerCoin(int coins);
+public: soy();
+	    int getCardsPerCoin(int coins);
 		string getName();
 		void print(ostream& out);
 };
 
 class black : public Card {
-public: int getCardsPerCoin(int coins);
+public: black();
+	    int getCardsPerCoin(int coins);
 		string getName();
 		void print(ostream& out);
 };
 
 class Red : public Card {
-public: int getCardsPerCoin(int coins);
+public: Red();
+	    int getCardsPerCoin(int coins);
 		string getName();
 		void print(ostream& out);
 };
 
 class garden : public Card {
-public: int getCardsPerCoin(int coins);
+public: garden();
+	    int getCardsPerCoin(int coins);
 		string getName();
 		void print(ostream& out);
 };

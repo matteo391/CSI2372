@@ -1,5 +1,10 @@
 #include "Deck.h"
+#include "CardFactory.h"
 
+
+Deck::Deck(istream& stream, const CardFactory* Cfactory) {
+    
+    //todo
 
 Deck::Deck(istream& stream, const CardFactory*) {
     //todo

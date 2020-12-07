@@ -6,6 +6,7 @@
 using namespace std;
 
 
+
 class Deck : vector <Card*> {
 public: Deck(istream&, const CardFactory*); //todo
 		Deck(const CardFactory*);
