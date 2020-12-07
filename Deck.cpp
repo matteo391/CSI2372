@@ -4,27 +4,24 @@
 
 Deck::Deck(istream& stream, const CardFactory* Cfactory) {
     
-    // reconstruct
+    //todo
 
-}
+Deck::Deck(istream& stream, const CardFactory*) {
+    //todo
+} 
+
+Deck::Deck(const CardFactory*) {
+    
+} 
 
 Card* Deck::draw() {
-    if (empty()) {
-        cout << "the deck is empty";
-        return NULL;
-   }
+    if (this->size() <= 0) {
+
+        return nullptr;
+    }
     else {
-        Card* card = back();
-        pop_back();
-        return card;
+        Card* topCard = this->back();
+        this->pop_back();
+        return topCard;
     }
-}
-
-
-std::ostream& operator<<(std::ostream& oStream, Deck& deck)
-{
-    for (Card &c: deck) {
-        oStream << *c;
-    }
-    return oStream;
 }

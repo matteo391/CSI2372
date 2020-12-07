@@ -3,7 +3,7 @@
 Player::Player(std::string& name) {
 	this->namePlayer = name;
 }
-
+//care for istreams
 Player::Player(istream& is,const CardFactory* _cFactory) {
 	
 }

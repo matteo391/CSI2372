@@ -17,6 +17,9 @@ private: string namePlayer;
 		 Chain chain3;
 		 Hand* hand;
 public: Player(std::string& name);
+
+		Player();
+
 		Player(istream&, const CardFactory*);
 	    std::string getName();
 		int getNumCoins();

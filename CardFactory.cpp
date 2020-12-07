@@ -1,4 +1,5 @@
 #include "CardFactory.h"
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -6,7 +7,6 @@
 
 CardFactory::CardFactory()
 {
-
 	cout << "Creating the deck";
 	for (int i = 0; i < 20; i++) {
 		deck.push_back(blue);
@@ -50,5 +50,4 @@ Deck CardFactory::getDeck() {
      //shuffle
 	auto randomdeck = std::default_random_engine{};
 	std::shuffle(std::begin(deck), std::end(deck), randomdeck);
-
 }
