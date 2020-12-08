@@ -10,10 +10,11 @@ class Chain_base {
 
 public: Chain_base() {};
 
-		//todo: istream constructor
-
 		virtual int sell() const {
-			return 0; //Chain_base has no chains and always returns 0
+			return 0;
+		};
+		virtual void print(ostream& out) {
+			out << "Empty Chain";
 		};
 		virtual Chain_base& operator+=(Card* card) {
 			return *this;
@@ -25,10 +26,9 @@ public: Chain_base() {};
 
 template <class color> 
 class Chain : public Chain_base {
-		vector<color*> Cards;
+		
 public: Chain() {};
-	  //todo istream constructor
-	  
+public: vector<color*> Cards;
 
 	  Chain<color>& operator+= (Card* card) {
 		  color* cardType;
@@ -41,16 +41,22 @@ public: Chain() {};
 			  Cards.push_back(card);
 		  }
 		  return *this;
-	  };
-
+	  }
 	  int sell() {
 
 		  int numCards = Cards.size();
 		  color* topCard = Cards.front();
 
 		  return topCard->getCardsPerCoin(numCards);
-
 	  }
+	  void print(ostream& out) {
+		  out << Cards.front()->getName() << "    " << endl;
+		  for (auto cardPrint : Cards) {
+			  cardPrint->print(out);
+			  out << " ";
+		  }
+	  }
+
 
 };
 

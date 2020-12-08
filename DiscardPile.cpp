@@ -38,6 +38,11 @@ Card* DiscardPile::Top()
     }
 }
 
-//void DiscardPile::print(std::ostream&) {}
-
-
+ostream& operator<<(ostream& out, const DiscardPile& discardpile)
+{
+    for (auto inDiscard : discardpile.cards) {
+        inDiscard->print(out);
+        cout << " ";
+    }
+    return out;
+}

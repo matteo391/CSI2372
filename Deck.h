@@ -1,16 +1,15 @@
 #include <iostream>
 #include <vector>
 #include "Card.h"
-#include "CardFactory.h"
 
 using namespace std;
 
 
 
-class Deck : vector <Card*> {
-public: Deck(istream&, const CardFactory*); //todo
+class Deck : public vector <Card*> {
+		Deck(istream&, const CardFactory*);
 		Deck(const CardFactory*);
+public :Deck(const vector<Card*> cards);
 		Card* draw();
-		//todo insertion operator (friend)
 };
 

@@ -6,15 +6,15 @@
 using namespace std;
 
 class Table {
-private:	Player* player1;
+	public: Player* player1;
 			Player* player2;
-		 	DiscardPile* discardPile;
-		 	TradeArea* tradearea;
-	public: Table(istream, const CardFactory*);
+			Table(istream, const CardFactory*);
+			DiscardPile* discardPile;
 			Table();
 			Deck* deck;
+			TradeArea* tradearea;
 			bool win(string&);
 			void printHand(bool);
-			//todo insertion operator
+			friend ostream& operator<<(ostream&, const Table&);
 };
 

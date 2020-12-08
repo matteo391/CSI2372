@@ -32,11 +32,19 @@ Card* TradeArea::trade(string type)
 		}
 		advance(iterator, 1);
 	}
-	//todo: throw exception here? or in legal
 	return nullptr;
 }
 
 int TradeArea::numCards()
 {
 	return cards.size();
+}
+
+ostream& operator<<(ostream& out, const TradeArea& tradeArea)
+{
+	for (auto inTrade : tradeArea.cards) {
+		inTrade->print(out);
+		cout << " ";
+	}
+	return out;
 }

@@ -10,7 +10,6 @@ class CardFactory {
 
 private:
 	CardFactory();
-	Deck deck;
 	Blue blue;
 	Chili chili;
 	Stink stink;
@@ -22,7 +21,7 @@ private:
 
 
 public: 
-	
+	vector<Card*> deck;
 	~CardFactory();
 	static CardFactory* getFactory(); //Only one copy of Card Factory
 	Deck getDeck();

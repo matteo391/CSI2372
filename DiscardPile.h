@@ -6,11 +6,10 @@ using namespace std;
 
 class DiscardPile{
 	vector<Card*> cards;
-	public: DiscardPile(istream&, const CardFactory*); //todo
+	public: DiscardPile(istream&, const CardFactory*);
 			DiscardPile(const CardFactory*);
 			DiscardPile& operator+=(Card*);
 			Card* PickUp();
 			Card* Top();
-			//void print(std::ostream&);
-			//todo insertion operator (friend)
+			friend ostream& operator<< (ostream&, const DiscardPile&);
 };

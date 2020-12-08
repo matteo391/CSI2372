@@ -31,16 +31,18 @@ bool Table::win(string& name)
 	return false;
 }
 
-void Table::printHand(bool fullHand)
+ostream& operator<<(ostream& out, const Table& table)
 {
-	if (fullHand) {
+	out << "Player 1" << endl;
+	out << table.player1 << endl;
 
-		//player1->printHand(fullHand);
+	out << "Player 2" << endl;
+	out << table.player2 << endl;
 
-	}
-	else {
-		
-		//player1->printHand(fullHand);
+	out << "Trading Area" << endl;
+	out << table.tradearea << endl;
 
-	}
+	out << "Discard Pile" << endl;
+	out << table.discardPile << endl;
+
 }
