@@ -7,7 +7,11 @@
 #include "Table.h"
 #include "TradeArea.h"
 
+//Student1 Name: Matteo Pimentel Section A
+//Student1 Number: 8298683
 
+//Student2 Name: Dahong He 300063385 Section A
+//Student2 Number: 300063385 
 
 int main()
 {
@@ -170,6 +174,6 @@ int main()
 			table->discardPile->operator+=(table->player1->hand->play());
 		}
 	}
-
+	//Main method is unfinished.
 }
 
